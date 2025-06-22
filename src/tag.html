@@ -1,0 +1,32 @@
+---
+pagination: 
+    data: collections
+    size: 1
+    alias: tag
+    addAllPagesToCollections: true
+layout: layouts/tag.html
+permalink: /blog/tag/{{ tag | slugify }}/
+eleventyComputed:
+    title: posts tagged "{{ tag }}""
+---
+
+
+<!-- POST LIST -->
+    <ul class="post-list">
+        {% for post in collections[tag] | reverse %}
+            <li class="post">
+                <!--<img src="../assets/images/ordinace-3.jpg" alt="ordinace" style="width: 100px; height: auto">-->
+                <a class="post-title" href="{{ post.url }}">{{ post.data.title }}</a>
+                <p class="post-date">{{ post.date | blogDate }}</p>
+                {% if post.data.tags %}
+                    <ul class="post-tags">
+                        {% for tag in post.data.tags %}
+                            <li class="tag">
+                                <a href="/blog/tag/{{ tag | slugify }}">{{tag}}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>

@@ -1,0 +1,228 @@
+body {
+    max-width: 610px;
+    padding: 0;
+    margin: 0 auto;
+    font-family:'Inter', sans-serif;
+    font-size: 16px;
+}
+
+.main {
+    max-width: 610px;
+    min-height: 100vh;
+    padding: 0;
+    margin: 50px 20px;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: normal;
+}
+
+p {
+    line-height: 1.65;
+    font-size: 16px;
+    color: rgb(41, 41, 41);
+}
+
+a:link,
+a:visited {
+    text-decoration: underline;
+    color: grey;
+}
+
+a:hover,
+a:active {
+    text-decoration: underline;
+    color: rgb(91, 91, 91);
+}
+
+/* NAVIGATION */
+
+ul.navigation {
+    list-style: none;
+    padding: 0;
+}
+
+ul.navigation li {
+  display: inline;
+}
+
+ul.navigation li+li:before {
+  padding: 4px;
+  color: rgb(152, 152, 152);
+  content: "/\00a0";
+}
+
+.navigation a:link,
+.navigation a:visited {
+    text-decoration: none;
+    color: grey;
+}
+
+.navigation a:hover,
+.navigation a:active {
+    text-decoration: none;
+    color: rgb(91, 91, 91);
+}
+
+/* WEB-RING */
+
+.webring {
+    width: fit-content;
+    border: 1.7px dashed;
+    border-radius: 12px;
+    padding: 30px;
+    margin: auto;
+}
+
+.webring p {
+    margin: 0 0 16px 0;
+}
+
+.webring ul {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 10px;
+}
+
+.webring li {
+    margin: 5px 0;
+}
+
+.webring ul li::before {
+  content: "\2012";
+  margin-right: 1rem;
+}
+
+/* BLOG */
+
+.post-list {
+    list-style: none;
+    padding: 0;
+    gap: 15px;
+}
+
+.post {
+    background: rgb(255, 255, 255);
+    border: 1.5px dashed black;
+    margin: 10px 0;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.post a:link,
+.post a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.post a:hover,
+.post a:active {
+    text-decoration: underline;
+}
+
+.post-date {
+    margin: 0;
+    color: rgb(106, 106, 106);
+}
+
+.post-tags {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin: 3px -3px;
+}
+
+.tag a:link,
+.tag a:visited {
+    padding: 3px 5px;
+    margin: 0 3px;
+    background: rgb(255, 255, 255);
+    border: 1px solid grey;
+    border-radius: 5px;
+    text-decoration: none;
+    color: grey;
+    font-family: monospace;
+}
+
+.tag a:hover,
+.tag a:active {
+    padding: 3px 5px;
+    margin: 0 3px;
+    background: rgb(240, 240, 240);
+    border-radius: 5px;
+    text-decoration: none;
+    color: grey;
+}
+
+
+
+/* BOOKSHELF */
+
+.book-grid {
+    list-style-type: none;
+    padding: 0 0 0;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 150px);
+    margin-inline: auto;
+    justify-content: space-evenly;
+    justify-items: center;
+    gap: 15px;
+}
+
+.book-item {
+    width: 160px;
+    border: 1.5px black dashed;
+}
+.book-img {
+   background: rgb(243, 243, 243);
+}
+
+.book-item img {
+    display: block;
+    width: 125px;
+    height: auto;
+    margin: auto;
+  }
+
+.book-info {
+    padding: 5px 10px;
+    border-top: 1.5px black dashed;
+}
+
+.book-title {
+    margin: 5px 0;
+}
+
+.book-author {
+    margin: 5px 0;
+    color: grey;
+    font-size: 14px;
+}
+
+.reading-tag p span:before {
+    animation: dots 2s linear infinite;
+    content: '';
+  }
+
+  @keyframes dots {
+    0%, 20% {
+      content: 'reading.';
+    }
+    40% {
+      content: 'reading..';
+    }
+    60% {
+      content: 'reading...';
+    }
+    90%, 100% {
+      content: 'reading';
+    }
+}
+
+.reading-tag-none {
+    display: none;
+}

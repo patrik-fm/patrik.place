@@ -1,0 +1,35 @@
+---
+layout: layouts/blog.html
+title: blog
+---
+
+    <!-- TAGS INDEX -->
+    <ul class="post-tags">
+    {% for tag in collections.tagList %}
+        <li class="tag">
+            <a href="/blog/tag/{{ tag.title | slugify }}">{{ tag.title }}</a>
+        </li>
+    {% endfor %}
+    </ul>
+
+    <!-- POST LIST -->
+    <ul class="post-list">
+        {% for post in collections.posts | reverse %}
+            <li class="post">
+                <a class="post-title" href="{{ post.url }}">{{ post.data.title }}</a>
+                <p class="post-date">{{ post.date | blogDate }}</p>
+                {% if post.data.tags %}
+                    <ul class="post-tags">
+                        {% for tag in post.data.tags %}
+                            <li class="tag">
+                                <a href="/blog/tag/{{ tag | slugify }}">{{tag}}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+
+
+

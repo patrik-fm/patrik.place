@@ -1,0 +1,18 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+
+<div class="main">
+
+    <!-- NAVIGATION -->
+    <ul class="navigation">
+        <li><a href="/">patrik.place</a></li>
+        <li><a href="/blog">blog</a></li>
+        <li class="tag">tag: <a class="tag" href="/blog/tag/{{ tag | slugify }}">{{ tag }}</a></li>
+    </ul>
+
+    {{ content | safe }}
+
+</div>
+    
+{% endblock %}

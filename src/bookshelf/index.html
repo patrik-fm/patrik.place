@@ -1,0 +1,19 @@
+---
+layout: layouts/bookshelf.html 
+title: bookshelf
+---
+
+<ul class="book-grid">
+    {% for book in collections.books | reverse %}
+        <li class="book-item">
+            <div class="book-img">
+                <!--<div class="reading-tag"><p><span></span></p></div>-->
+                <img src="{{ book.data.image }}" alt="{{ book.data.title }} {{ book.data.author }}">
+            </div>
+            <div class="book-info">
+                <p class="book-title">{{ book.data.title }}</p>
+                <p class="book-author">{{ book.data.author }}</p>
+            </div>
+        </li>
+    {% endfor %}
+</ul>

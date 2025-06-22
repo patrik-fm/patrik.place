@@ -1,0 +1,17 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+
+<div class="main">
+
+    <!-- NAVIGATION -->
+    <ul class="navigation">
+        <li><a href="/">patrik.place</a></li>
+        <li>bookshelf</li>
+    </ul>
+
+    {{ content | safe }}
+
+</div>
+    
+{% endblock %}
