@@ -1,0 +1,1 @@
+run `npm start` to deploy build site and deploy local server
