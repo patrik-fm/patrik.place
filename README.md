@@ -1,1 +1,1 @@
-run `npm start` to deploy build site and deploy local server
+run `npm start` to build site and deploy local server
