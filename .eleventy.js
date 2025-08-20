@@ -1,11 +1,6 @@
-/* ADDS NAVIGATION PLUGIN */
-import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 
 export default function(eleventyConfig) {
-
-    /* NAVIGATION PLUGIN*/
-    eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
     /* IMAGE PLUGIN */
     eleventyConfig.addPlugin(eleventyImageTransformPlugin);
@@ -25,8 +20,16 @@ export default function(eleventyConfig) {
     })
 
     /* MAKES COLLECTION OF BOOKS */
-    eleventyConfig.addCollection('books', function(collectionApi) {
-        return collectionApi.getFilteredByGlob('src/bookshelf/books/**/*.md')
+    eleventyConfig.addCollection('books-read', function(collectionApi) {
+        return collectionApi.getFilteredByGlob('src/bookshelf/books-read/**/*.md')
+    })
+
+    eleventyConfig.addCollection('books-reading', function(collectionApi) {
+        return collectionApi.getFilteredByGlob('src/bookshelf/books-reading/**/*.md')
+    })
+
+    eleventyConfig.addCollection('books-wishlist', function(collectionApi) {
+        return collectionApi.getFilteredByGlob('src/bookshelf/books-wishlist/**/*.md')
     })
 
     /* DATE FORMAT IN BLOG POSTS */

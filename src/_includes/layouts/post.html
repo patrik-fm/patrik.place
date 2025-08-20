@@ -8,10 +8,12 @@
     <ul class="navigation">
         <li><a href="/">patrik.place</a></li>
         <li><a href="/blog">blog</a></li>
-        <li>{{ title }}</li>
+        <li>...</li>
     </ul>
 
     <div>
+        <h1>{{ title }}</h1>
+        <p class="post-date" style="margin: 10px 0;"><time>{{ date | blogDate }}</time></p>
         <ul class="post-tags">
             {% for tag in tags %}
                 <li class="tag">
@@ -19,7 +21,6 @@
                 </li>
             {% endfor %}
         </ul>
-        <p class="post-date" style="margin: 10px 0;"><time>{{ date | blogDate }}</time></p>
         {{ content | safe }}
     </div>
 

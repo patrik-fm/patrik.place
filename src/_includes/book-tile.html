@@ -1,0 +1,20 @@
+<li>
+    <a class="book-item" href="/bookshelf">
+        <div class="book-img">
+            <img src="{{ book.data.image }}" alt="{{ book.data.title }} {{ book.data.author }}">
+        </div>
+        <div class="book-info">
+            <p class="book-title">{{ book.data.title }}</p>
+            <p class="book-author">{{ book.data.authors }}</p>
+            <!-- {% if book.data.authors %}
+                <ul>
+                    {% for author in book.data.authors %}
+                        <li>
+                            <a href="/bookshelf/author/{{ author | slugify }}">{{author}}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %} -->
+        </div>
+    </a>
+</li>

@@ -1,5 +1,6 @@
 ---
 title: CAPS LOCK
-author: Ruben Pater
+authors: 
+    - Ruben Pater
 image: ../assets/images/placeholder-img.png
 ---

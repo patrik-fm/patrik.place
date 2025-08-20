@@ -1,5 +1,6 @@
 ---
 title: Design for the Real World
-author: Victor Papanek
+authors: 
+    - Victor Papanek
 image: ../assets/images/placeholder-img.png
 ---
